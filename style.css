@@ -1,0 +1,774 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fixed Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 10%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Makes the header fixed */
+    top: 0; /* Stick to the top */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensures it stays on top of other elements */
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d00000;
+}
+
+/* Navigation Menu */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d00000;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect on Nav Links */
+nav ul li a:hover {
+    /* color: #FF5722; */
+    border-bottom:2px solid #bf0603 ;
+}
+
+/* Sign-in Button */
+.btn-signin {
+    background-color: #FF5722;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-signin:hover {
+    background-color: #e64a19;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 10% 50px; /* Adjusted padding to compensate for the fixed header */
+    background-color: #f9f9f9;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    
+}
+
+.btn-contact {
+    background-color: #FF5722;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-contact:hover {
+    background-color: #e64a19;
+}
+
+ .hero-image img {
+    width: 400px;
+    border-radius: 10px;
+} 
+
+/* 
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+} */
+/* !!!!!!!!!!!!!!!!!! */
+
+.services {
+    text-align: center;
+    padding: 50px 10%;
+    background-color: #f9f9f9;
+}
+
+.services h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.services p {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.service-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+
+.icon-container {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    
+}
+
+.icon-container img {
+    width: 50px;
+}
+
+.service-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Hover effect */
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-item:hover .icon-container {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.why-choose-us {
+    background-color: #00695c;
+    padding: 50px 10%;
+    color: white;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.image-container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.image-container img {
+    max-width: 70%;
+    /* border-radius: 50px; */
+    display: block;
+   
+}
+
+.text-container {
+    flex: 1;
+}
+
+.text-container h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #e0f7fa;
+}
+
+.text-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.text-container ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.text-container ul li::before {
+    content: "✔";
+    margin-right: 10px;
+    color: #ffeb3b;
+    font-weight: bold;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+/* Appominate Section Styles */
+/* Appominate Section Styles */
+.appominate {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.appominate h2 {
+    color: #1e3a8a; /* Match your brand color */
+}
+
+.appominate-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.appominate-text {
+    max-width: 600px;
+}
+
+.appominate-image img {
+    width: 100%;
+    max-width: 400px; /* Adjust based on your design */
+    height: auto;
+    border-radius: 8px;
+}
+
+.btn-appominate {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-appominate:hover {
+    background-color: #0056b3;
+}
+
+/* Appointment Request Form Styles */
+.appointment-request {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.appointment-request h2 {
+    color: #1e3a8a; /* Match your brand color */
+}
+
+.appointment-request p {
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical; /* Allows vertical resizing only */
+}
+
+.btn-appointment {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-appointment:hover {
+    background-color: #0056b3;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!! */
+/* Centering the appointment section content */
+.appointment-section {
+    display: flex;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: flex-start; /* Aligns content to the top */
+    min-height: 100vh; /* Takes full viewport height */
+    padding-top: 50px; /* Adds space at the top to move content upward */
+    text-align: center;
+}
+
+/* Button styling */
+.btn-request-appointment {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px; /* Space above the button */
+}
+
+.btn-request-appointment:hover {
+    background-color: #333333;
+}
+
+
+
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.best-sales {
+    padding: 50px 10%;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.best-sales h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.best-sales p {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.sales-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns layout */
+    gap: 10px; /* Gap between the cards */
+    justify-content: center;
+}
+
+.sales-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sales-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.sales-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.sales-item p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 20px;
+    color: #28a745;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.old-price {
+    font-size: 16px;
+    color: #777;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+.sales-item button {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.sales-item button:hover {
+    background-color: #e64a19;
+}
+
+/* Hover effect */
+.sales-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .sales-grid {
+        grid-template-columns: 1fr; /* Stack the items in a single column for mobile */
+    }
+    .sales-item {
+        width: 100%; /* Full width for each card on small screens */
+        margin-bottom: 20px;
+    }
+}
+/* ?----------------------------  review coustomer---------------------------------------------------------------------- */
+
+/* Customer Reviews Section */
+
+/* Customer Reviews Section */
+.customer-reviews {
+    padding: 30px 5%; /* Reduced padding for more compact section */
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.customer-reviews h2 {
+    font-size: 28px; /* Slightly smaller title */
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.customer-reviews p {
+    font-size: 16px; /* Slightly smaller paragraph */
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* Reviews Grid */
+.reviews-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Reduced gap between items */
+    flex-wrap: wrap;
+}
+
+/* Review Item */
+.review-item {
+    background-color: white;
+    padding: 15px; /* Reduced padding */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Smaller width for more compact look */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-item img {
+    width: 60px; /* Smaller image */
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.review-item h3 {
+    font-size: 18px; /* Slightly smaller heading */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.review-item p {
+    font-size: 14px; /* Smaller font for text */
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.rating {
+    color: #ff5722;
+    font-size: 18px; /* Slightly smaller stars */
+}
+
+/* Hover effect */
+.review-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .review-item {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+/* ?--------------------------------------review costomer-------------------------------------------------------- */
+/* !  -----------------------------   footer */
+
+/* Footer Base Styles - Reduced Height */
+footer {
+    background-color: #161a1d;
+    color: white;
+    padding: 5px 5%; /* Reduced padding */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Reduced gap between sections */
+}
+
+footer p {
+    margin-bottom: 10px; /* Reduced margin */
+    font-size: 14px; /* Smaller font size */
+    color: #bbb;
+}
+
+/* Footer Navigation */
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Reduced gap between links */
+    padding: 0;
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px; /* Smaller font size */
+    
+}
+
+footer nav ul li a:hover {
+    color: #bf0603;
+    border-bottom:2px solid #bf0603 ;
+    
+}
+
+/* Social Media */
+footer .social-media a {
+    color: white;
+    margin: 0 8px; /* Reduced margin between icons */
+    font-size: 18px; /* Slightly smaller icon size */
+    text-decoration: none;
+    
+}
+
+footer .social-media a:hover {
+    color: #ff5722;
+    border-bottom:2px solid #bf0603 ;
+}
+
+/* Contact Information */
+footer .contact-info {
+    margin-bottom: 10px; /* Reduced margin */
+    font-size: 14px; /* Smaller font size */
+}
+
+footer .contact-info a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .contact-info a:hover {
+    color: #ff5722;
+    border-bottom:2px solid #bf0603 ;
+}
+
+/* Newsletter Subscription */
+footer .newsletter h3 {
+    font-size: 18px; /* Smaller font size */
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+footer .newsletter p {
+    font-size: 14px; /* Smaller font size */
+    color: #bbb;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+footer .newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Reduced gap */
+}
+
+footer .newsletter input[type="email"] {
+    padding: 8px; /* Reduced padding */
+    font-size: 14px; /* Smaller font size */
+    border-radius: 5px;
+    border: none;
+    width: 250px; /* Reduced width */
+}
+
+footer .newsletter button {
+    padding: 8px 15px; /* Reduced padding */
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Smaller font size */
+    transition: background-color 0.3s ease;
+}
+
+footer .newsletter button:hover {
+    background-color:  #bf0603 ;;
+}
+
+/* Extra Links */
+footer .extra-links {
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+footer .extra-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px; /* Smaller font size */
+    margin: 0 8px; /* Reduced margin */
+}
+
+footer .extra-links a:hover {
+    color: #ff5722;
+    border-bottom:2px solid #bf0603 ;
+}
+
+/* Back-to-Top Button */
+/* Back-to-Top Button */
+footer .back-to-top {
+    margin-top: 10px; /* Reduced margin */
+    text-align: left; /* Align the button content to the left */
+}
+
+footer .back-to-top a {
+    color: #ff5722;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px; /* Smaller font size */
+    display: flex; /* To align text and image horizontally */
+    align-items: center; /* Vertically center the image and text */
+}
+
+footer .back-to-top a img.icon {
+    margin-left: 5px; /* Space between the text and the image */
+    width: 50px; /* Adjust the size of the image icon */
+    height: 50px; /* Maintain aspect ratio */
+}
+
+footer .back-to-top a:hover {
+    color: white;
+}
+
+
+/* Responsive Styles */
+
+  @media (max-width: 768px) {
+    footer nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer .newsletter form {
+        flex-direction: column;
+    }
+
+    footer .newsletter input[type="email"] {
+        width: 100%;
+    }
+
+    footer .social-media a {
+        font-size: 16px; 
+    }
+}  
+
+
+
+
+
+
